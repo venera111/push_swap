@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/26 20:44:39 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/26 20:55:04 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 int	*get_argv(char **argv, int argc)
 {
-	int	i;
+	int		i;
+	int		k;
+	char	**arguments;
 
 	i = 1;
+	k = 0;
 	while (argv[i])
 	{
-		
+		arguments[k] = ft_split(argv[i], ' ');
 		i++;
+		k++;
 	}
 }
 
