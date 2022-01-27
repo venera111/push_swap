@@ -6,13 +6,10 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/01/26 20:55:04 by qestefan         ###   ########.fr       */
-=======
-/*   Updated: 2022/01/26 23:31:48 by qestefan         ###   ########.fr       */
->>>>>>> 3ee87816b3a77bf7f6b0de4c5b7abb136f8a0eeb
+/*   Updated: 2022/01/27 11:22:01 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "include/push_swap.h"
 
@@ -22,13 +19,11 @@ int	ft_arrlen(char **str)
 	int		k;
 	char	**arguments;
 
-<<<<<<< HEAD
 	i = 1;
 	k = 0;
 	while (argv[i])
 	{
 		arguments[k] = ft_split(argv[i], ' ');
-=======
 	i = 0;
 	while(str[i])
 		i++;
@@ -60,7 +55,6 @@ void	get_argv(char **argv, int argc)
 		arg[i] = (char **)malloc(sizeof(char **));
 		arg[i] = ft_split(arg[i], ' ');
 		count += ft_arrlen(arg[i]);
->>>>>>> 3ee87816b3a77bf7f6b0de4c5b7abb136f8a0eeb
 		i++;
 		k++;
 	}
