@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/27 14:48:15 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:49:22 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,17 @@ int	*save_buffer(int *str, int *buffer)
 	{
 		temp = str;
 		str = ft_strjoin_int(str, buffer);
-		
+		free(temp);
 	}
 	else
-	{
-
-	}
+		str = ft_strdup_int(buffer);
+	return (str);
 }
 
 void get_argv(char **argv, int argc)
 {
 	int			i;
-	int 		k;
+	int			k;
 	char		**str;
 	int			count;
 	int			*buffer;
@@ -77,15 +76,24 @@ void get_argv(char **argv, int argc)
 	i = 1;
 	while (argv[i])
 	{
-		k = 0;
 		str = ft_split(argv[i], ' ');
 		count = ft_arrlen(str);
 		buffer = (int *)malloc(sizeof(int) * count);
+		if (!buffer)
+			perror("No allocate!");
 		buffer = fill_array(buffer, str, count);
 		ft_free(str);
-		// конкатенация массивов int в один
+		k = 0;
+		// while (k < count) // печать буфера (одного аргумента)
+		// 	printf("%d\n", buffer[k++]);
 		arguments = save_buffer(arguments, buffer);
 		free(buffer);
+		i++;
+	}
+	i = 0;
+	while (i < 6)
+	{
+		printf("%d ", arguments[i]);
 		i++;
 	}
 }
