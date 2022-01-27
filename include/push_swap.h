@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/26 20:37:40 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/26 22:54:57 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 #define PUSH_SWAP_H
 
 #include "libft/libft.h"
+#include <stdlib.h> // malloc free
 
 #endif
