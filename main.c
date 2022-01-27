@@ -6,15 +6,15 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/27 16:49:22 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/27 21:44:54 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_free(char **str)
+void	ft_free(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -25,9 +25,9 @@ void ft_free(char **str)
 	free(str);
 }
 
-int ft_arrlen(char **str)
+int	ft_arrlen(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -35,35 +35,35 @@ int ft_arrlen(char **str)
 	return (i);
 }
 
-int *fill_array(int *array, char **str, int count)
+int	*fill_array(int *buffer, char **str, int count)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < count)
 	{
-		array[i] = ft_atoi(str[i]);
+		buffer[i] = ft_atoi(str[i]);
 		i++;
 	}
-	return (array);
+	return (buffer);
 }
 
-int	*save_buffer(int *str, int *buffer)
+int	*save_buffer(int *arguments, int *buffer, int count, int counter)
 {
 	int	*temp;
 
-	if (str)
+	if (arguments)
 	{
-		temp = str;
-		str = ft_strjoin_int(str, buffer);
-		free(temp);
+		// temp = arguments;
+		arguments = ft_strjoin_int(arguments, buffer, counter, count);
+		// free(temp);
 	}
 	else
-		str = ft_strdup_int(buffer);
-	return (str);
+		arguments = ft_strdup_int(buffer, count);
+	return (arguments);
 }
 
-void get_argv(char **argv, int argc)
+void	get_argv(char **argv, int argc)
 {
 	int			i;
 	int			k;
@@ -71,34 +71,30 @@ void get_argv(char **argv, int argc)
 	int			count;
 	int			*buffer;
 	static int	*arguments;
+	int			counter;
 
 	count = 0;
+	counter = 0;
 	i = 1;
 	while (argv[i])
 	{
 		str = ft_split(argv[i], ' ');
 		count = ft_arrlen(str);
+		counter += count;
 		buffer = (int *)malloc(sizeof(int) * count);
-		if (!buffer)
-			perror("No allocate!");
 		buffer = fill_array(buffer, str, count);
 		ft_free(str);
-		k = 0;
-		// while (k < count) // печать буфера (одного аргумента)
-		// 	printf("%d\n", buffer[k++]);
-		arguments = save_buffer(arguments, buffer);
+		arguments = save_buffer(arguments, buffer, count, counter);
 		free(buffer);
 		i++;
 	}
-	i = 0;
-	while (i < 6)
-	{
-		printf("%d ", arguments[i]);
-		i++;
-	}
+	k = 0;
+	while (k < counter)
+		printf("%d\n", arguments[k++]);
+	free(arguments);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc < 2)
 		return (0);
