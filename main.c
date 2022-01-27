@@ -6,66 +6,76 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/27 11:22:01 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/27 13:24:03 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 
-#include "include/push_swap.h"
-
-int	ft_arrlen(char **str)
+void ft_free(char **str)
 {
-	int		i;
-	int		k;
-	char	**arguments;
+	int i;
 
-	i = 1;
-	k = 0;
-	while (argv[i])
-	{
-		arguments[k] = ft_split(argv[i], ' ');
 	i = 0;
-	while(str[i])
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
+int ft_arrlen(char **str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
 		i++;
 	return (i);
 }
 
-int	*fill_array(char *array, char **arg)
+int *fill_array(int *array, char **str, int count)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	while (arg[i])
-
+	while (i < count)
+	{
+		array[i] = ft_atoi(str[i]);
+		i++;
+	}
 	return (array);
 }
 
-void	get_argv(char **argv, int argc)
+void get_argv(char **argv, int argc)
 {
 	int		i;
-	char	***arg;
+	char	**str;
 	int		count;
 	int		*array;
 
 	count = 0;
-	arg = (char ***)malloc(sizeof(char *));
-	i = 0;
-	while (i < argc - 1)
+	i = 1;
+	int k = 0;
+	while (argv[i])
 	{
-		arg[i] = (char **)malloc(sizeof(char **));
-		arg[i] = ft_split(arg[i], ' ');
-		count += ft_arrlen(arg[i]);
+		k = 0;
+		str = ft_split(argv[i], ' ');
+		count = ft_arrlen(str);
+		array = (int *)malloc(sizeof(int) * count);
+		array = fill_array(array, str, count);
+		ft_free(str);
+		// while (k < count)
+		// 	printf("%d ", array[k++]);
+		free(array);
 		i++;
-		k++;
 	}
-	array = (int *)malloc(sizeof(int) * count);
-	array = fill_array(array, arg);
-	free(arg); // и очистить **str и arg[i] в цикле в новой функции и **arg, array
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	if (argv < 2)
+	if (argc < 2)
 		return (0);
 	get_argv(argv, argc);
 	return (0);

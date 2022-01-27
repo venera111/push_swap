@@ -2,5 +2,9 @@
 	"editor.tokenColorCustomizations": {
 		"comments": "",
 		"textMateRules": []
+	},
+	"files.associations": {
+		"push_swap.h": "c",
+		"libft.h": "c"
 	}
 }
