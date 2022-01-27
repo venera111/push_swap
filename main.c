@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/27 14:26:29 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/27 14:48:15 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,18 @@ int *fill_array(int *array, char **str, int count)
 
 int	*save_buffer(int *str, int *buffer)
 {
-	
+	int	*temp;
+
+	if (str)
+	{
+		temp = str;
+		str = ft_strjoin_int(str, buffer);
+		
+	}
+	else
+	{
+
+	}
 }
 
 void get_argv(char **argv, int argc)
@@ -70,14 +81,10 @@ void get_argv(char **argv, int argc)
 		str = ft_split(argv[i], ' ');
 		count = ft_arrlen(str);
 		buffer = (int *)malloc(sizeof(int) * count);
-		buffer = fill_array(array, str, count);
+		buffer = fill_array(buffer, str, count);
 		ft_free(str);
 		// конкатенация массивов int в один
-		while (k < count)
-		{
-			arguments = save_buffer(arguments, buffer);
-			k++;
-		}
+		arguments = save_buffer(arguments, buffer);
 		free(buffer);
 		i++;
 	}
