@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/27 21:44:54 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:42:29 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ int	*save_buffer(int *arguments, int *buffer, int count, int counter)
 
 	if (arguments)
 	{
-		// temp = arguments;
+		temp = arguments;
 		arguments = ft_strjoin_int(arguments, buffer, counter, count);
-		// free(temp);
+		free(temp);
 	}
 	else
 		arguments = ft_strdup_int(buffer, count);
@@ -66,7 +66,7 @@ int	*save_buffer(int *arguments, int *buffer, int count, int counter)
 void	get_argv(char **argv, int argc)
 {
 	int			i;
-	int			k;
+	// int			k;
 	char		**str;
 	int			count;
 	int			*buffer;
@@ -88,9 +88,9 @@ void	get_argv(char **argv, int argc)
 		free(buffer);
 		i++;
 	}
-	k = 0;
-	while (k < counter)
-		printf("%d\n", arguments[k++]);
+	// k = 0;
+	// while (k < counter)
+	// 	printf("%d\n", arguments[k++]);
 	free(arguments);
 }
 
