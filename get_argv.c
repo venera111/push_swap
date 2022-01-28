@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:57:49 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/28 12:00:00 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/28 12:54:52 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,31 +42,34 @@ int	*save_buffer(int *arguments, int *buffer, int count, int counter)
 
 void	init_getargv(t_getarg *getav)
 {
-	getav->count = 0;
-	getav->counter = 0;
+	getav->cnt = 0;
+	getav->cntr = 0;
 	getav->i = 1;
 	getav->k = 0;
 }
 
 void	get_argv(char **argv, int argc)
 {
-	static int	*arg;
 	t_getarg	getav;
 
 	init_getargv(&getav);
 	while (argv[getav.i])
 	{
 		getav.str = ft_split(argv[getav.i], ' ');
-		getav.count = ft_arrlen(getav.str);
-		getav.counter += getav.count;
-		getav.buff = (int *)malloc(sizeof(int) * getav.count);
-		getav.buff = fill_array(getav.buff, getav.str, getav.count);
+		if (!getav.str || !*getav.str)
+			ft_perror("Error\n");
+		getav.cnt = ft_arrlen(getav.str);
+		getav.cntr += getav.cnt;
+		getav.buff = (int *)malloc(sizeof(int) * getav.cnt);
+		if (!getav.buff)
+			ft_perror("Error\n");
+		getav.buff = fill_array(getav.buff, getav.str, getav.cnt);
 		ft_free(getav.str);
-		arg = save_buffer(arg, getav.buff, getav.count, getav.counter);
+		getav.arg = save_buffer(getav.arg, getav.buff, getav.cnt, getav.cntr);
 		free(getav.buff);
 		getav.i++;
 	}
-	while (getav.k < getav.counter)
-		printf("%d\n", arg[getav.k++]);
-	free(arg);
+	// while (getav.k < getav.cntr)
+	// 	printf("%d\n", getav.arg[getav.k++]);
+	free(getav.arg);
 }

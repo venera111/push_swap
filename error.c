@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/28 12:51:16 by qestefan         ###   ########.fr       */
+/*   Created: 2022/01/28 12:37:15 by qestefan          #+#    #+#             */
+/*   Updated: 2022/01/28 12:37:29 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	ft_perror(char *str)
 {
-	if (argc < 2)
-		return (0);
-	get_argv(argv, argc);
-	// fill_list();
-	return (0);
+	perror(str);
+	exit(EXIT_FAILURE);
 }
