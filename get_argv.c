@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:57:49 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/28 12:54:52 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 13:58:25 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	get_argv(char **argv, int argc)
 		free(getav.buff);
 		getav.i++;
 	}
-	// while (getav.k < getav.cntr)
-	// 	printf("%d\n", getav.arg[getav.k++]);
+	while (getav.k < getav.cntr)
+		printf("%d\n", getav.arg[getav.k++]);
 	free(getav.arg);
 }
