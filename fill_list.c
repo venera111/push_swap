@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:03:18 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 14:06:57 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,24 +51,13 @@ void	check_sort(int *arg, int len)
 	}
 }
 
-// t_stack	*fill_list(t_getarg getav, t_stack *a)
-// {
-// 	t_list	*new;
-// 	int 	i;
+t_stack	*fill_list(t_getarg getav, t_stack *a)
+{
+	t_list	*new;
+	int 	i;
 
-// 	a = (t_stack *)malloc(sizeof(t_stack));
-// 	if (!a)
-// 		ft_perror("Error\n");
-// 	new = ft_lstnew(&getav);
-// 	a->start = new;
-// 	a->len = getav.cntr;
-// 	i = 1;
-// 	while (i < getav.cntr)
-// 	{
-// 		ft_lstadd_back(a + i, new);
-// 		i++;
-// 	}
-// 	a->min = getav.arg[0];
-// 	a->mid = getav.arg[getav.cntr / 2];
-// 	a->max = getav.arg[getav.cntr - 1];
-// }
+	a = (t_stack *)malloc(sizeof(t_stack));
+	if (!a)
+		ft_perror("Error\n");
+	return (a);
+}
