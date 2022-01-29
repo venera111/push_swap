@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:06:57 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 14:29:44 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,13 @@ void	check_sort(int *arg, int len)
 
 t_stack	*fill_list(t_getarg getav, t_stack *a)
 {
-	t_list	*new;
+	t_lst	*new;
 	int 	i;
 
 	a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)
 		ft_perror("Error\n");
+	new = lstnew(getav.arg);
+	printf("%d ", new->num);
 	return (a);
 }
