@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/28 12:54:06 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 14:03:23 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,21 @@
 #include "libft/libft.h"
 #include <stdlib.h> // malloc free
 #include <stdio.h> // printf
+
+typedef struct s_list
+{
+	int				num;
+	struct s_list	*next;
+}	t_list;
+
+typedef struct s_stack
+{
+	t_list	*start;
+	int		len;
+	int		min;
+	int		mid;
+	int		max;
+}	t_stack;
 
 typedef struct s_getarg
 {
@@ -28,14 +43,17 @@ typedef struct s_getarg
 	int			*arg;
 }	t_getarg;
 
-int		ft_masslen(int *array);
-int		*ft_strjoin_int(int *s1, int *s2, int counter, int count);
-int		*ft_strdup_int(const int *s1, int count);
-void	get_argv(char **argv, int argc);
-int		*save_buffer(int *arguments, int *buffer, int count, int counter);
-int		*fill_array(int *buffer, char **str, int count);
-int		ft_arrlen(char **str);
-void	ft_free(char **str);
-void	ft_perror(char *str);
+int			ft_masslen(int *array);
+int			*ft_strjoin_int(int *s1, int *s2, int counter, int count);
+int			*ft_strdup_int(const int *s1, int count);
+int			*save_buffer(int *arguments, int *buffer, int count, int counter);
+int			*fill_array(int *buffer, char **str, int count);
+int			ft_arrlen(char **str);
+void		ft_free(char **str);
+void		ft_perror(char *str);
+void		check_repeats(int *arg, int counter);
+void		check_sort(int *arg, int len);
+t_getarg	get_argv(char **argv, int argc, t_getarg getav);
+// t_stack		*fill_list(t_getarg getav, t_stack *a);
 
 #endif
