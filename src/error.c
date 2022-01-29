@@ -6,14 +6,14 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 12:37:15 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 15:29:07 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 20:46:56 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_perror(char *str)
+void	ft_perror(void)
 {
-	perror(str);
-	exit(EXIT_FAILURE);
+	write(1, "Error\n", 6);
+	exit(0);
 }

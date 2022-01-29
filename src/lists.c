@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:21:53 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 15:35:30 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 20:47:31 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_lst	*lstnew(int val)
 
 	new = (t_lst *)malloc(sizeof(t_lst));
 	if (!new)
-		ft_perror("Error\n");
+		ft_perror();
 	new->num = val;
 	new->next = NULL;
 	return (new);

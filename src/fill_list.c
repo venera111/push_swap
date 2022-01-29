@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 17:56:36 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 20:49:02 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,23 @@
 
 void	check_repeats(int *arg, int counter)
 {
-	int	i;
+	int j;
+	int i;
 
 	i = 0;
-	while (i < counter - 1)
+	j = 0;
+	while (i < counter)
 	{
-		if (arg[i] == arg[i + 1])
-			ft_perror("Error\n");
+		j = i+1;
+  		while (j < counter)
+		{
+    		if (arg[i] == arg[j])
+				ft_perror();
+			j++;
+		}
 		i++;
-	}
+  	}
+
 }
 
 void	check_sort(int *arg, int len)
@@ -51,22 +59,21 @@ void	check_sort(int *arg, int len)
 	}
 }
 
-t_stack	*fill_list(t_getarg getav, t_stack *a)
+t_stack	*fill_list(t_getarg getav, t_stack *a, int *array)
 {
 	t_lst	*new;
 	int 	i;
 
 	a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)
-		ft_perror("Error\n");
-	new = lstnew(*(getav.arg));
-	i = 0;
-	while (i < getav.cntr)
-		printf("%d ", getav.arg[i++]);
-	// a->start = new; // исправить ошибку здесь
-	i = 0;
-	while (i < getav.cntr)
-		printf("%d ", getav.arg[i++]);
+		ft_perror();
+	// new = lstnew(*array); // add free
+	a->start = new;
 	a->len = getav.cntr;
+	// i = 1;
+	// while (i < getav.cntr)
+	// 	new = lstnext(new, *(array + i++)); // add free
+
 	return (a);
 }
+

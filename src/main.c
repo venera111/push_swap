@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 17:57:07 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 20:06:15 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	getav = get_argv(argv, argc, getav);
-	a = fill_list(getav, a);
+	a = get_argv(argv, argc, getav, a);
+	free(a);
 	return (0);
 }
