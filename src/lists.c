@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:21:53 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:46:02 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 15:29:18 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_lst	*lstnew(int val)
 {

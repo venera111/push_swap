@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:45:23 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 15:30:30 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	check_repeats(int *arg, int counter)
 {
@@ -60,6 +60,6 @@ t_stack	*fill_list(t_getarg getav, t_stack *a)
 	if (!a)
 		ft_perror("Error\n");
 	new = lstnew(*getav.arg);
-	printf("%d ", new->num);
+	// printf("%d ", new->num);
 	return (a);
 }

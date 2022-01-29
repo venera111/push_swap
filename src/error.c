@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 12:37:15 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/28 12:37:29 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 15:29:07 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_perror(char *str)
 {
