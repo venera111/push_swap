@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:30:05 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 14:40:15 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ void		check_sort(int *arg, int len);
 t_getarg	get_argv(char **argv, int argc, t_getarg getav);
 t_stack		*fill_list(t_getarg getav, t_stack *a);
 
-
+//lists
+t_lst		*lstnew(int val);
 #endif
