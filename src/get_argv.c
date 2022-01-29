@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:57:49 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 20:50:28 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 21:11:52 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	*fill_array(int *buffer, char **str, int count)
 
 int	*save_buffer(int *array, int *buffer, int count, int counter)
 {
-	// int	*temp;
+	int	*temp;
 
 	if (array)
 	{
-		// temp = array;
+		temp = array;
 		array = ft_strjoin_int(array, buffer, counter, count);
-		// free(temp);
+		free(temp);
 	}
 	else
 		array = ft_strdup_int(buffer, count);
@@ -48,9 +48,9 @@ void	init_getargv(t_getarg *getav)
 	getav->k = 0;
 }
 
-t_stack *get_argv(char **argv, int argc, t_getarg getav, t_stack *a)
+t_stack	*get_argv(char **argv, int argc, t_getarg getav, t_stack *a)
 {
-	int	*array;
+	static int	*array;
 
 	init_getargv(&getav);
 	while (argv[getav.i])
@@ -71,9 +71,6 @@ t_stack *get_argv(char **argv, int argc, t_getarg getav, t_stack *a)
 	}
 	check_repeats(array, getav.cntr);
 	check_sort(array, getav.cntr);
-	int i = 0;
-	while (i < getav.cntr)
-		printf("%d ", *(array + i++));
 	a = fill_list(getav, a, array);
 	free(array);
 	return (a);
