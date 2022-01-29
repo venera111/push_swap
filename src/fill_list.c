@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:29:44 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 14:45:23 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ t_stack	*fill_list(t_getarg getav, t_stack *a)
 	a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)
 		ft_perror("Error\n");
-	new = lstnew(getav.arg);
+	new = lstnew(*getav.arg);
 	printf("%d ", new->num);
 	return (a);
 }
