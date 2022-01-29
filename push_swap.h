@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 15:28:51 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 17:42:07 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ t_stack		*fill_list(t_getarg getav, t_stack *a);
 
 //lists
 t_lst		*lstnew(int val);
+t_lst		*lstnext(t_lst *lst, int val);
 
 #endif

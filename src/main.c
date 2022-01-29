@@ -6,11 +6,12 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 15:29:20 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 17:57:07 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
 int	main(int argc, char **argv)
 {
 	t_getarg	getav;
@@ -20,6 +21,5 @@ int	main(int argc, char **argv)
 		return (0);
 	getav = get_argv(argv, argc, getav);
 	a = fill_list(getav, a);
-
 	return (0);
 }
