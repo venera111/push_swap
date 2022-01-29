@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 14:03:23 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/29 14:04:36 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 #include <stdlib.h> // malloc free
 #include <stdio.h> // printf
 
-typedef struct s_list
+typedef struct s_lst
 {
 	int				num;
-	struct s_list	*next;
-}	t_list;
+	struct s_lst	*next;
+}	t_lst;
 
 typedef struct s_stack
 {
-	t_list	*start;
+	t_lst	*start;
 	int		len;
 	int		min;
 	int		mid;
