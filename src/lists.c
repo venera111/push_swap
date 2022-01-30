@@ -6,13 +6,13 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:21:53 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 21:19:05 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/30 14:24:34 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	lstdelone(t_list *lst)
+void	lstdelone(t_lst *lst)
 {
 	if (!lst)
 		ft_perror();
@@ -20,9 +20,9 @@ void	lstdelone(t_list *lst)
 		free(lst);
 }
 
-void	lstclear(t_list **lst)
+void	lstclear(t_lst **lst)
 {
-	t_list	*tmp;
+	t_lst	*tmp;
 
 	if (lst)
 	{

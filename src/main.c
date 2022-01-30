@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 21:19:09 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/30 14:35:41 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	a = get_argv(argv, argc, getav, a);
+	//
+	while (a->start)
+	{
+		printf("%d ", a->start->num);
+		a->start = a->start->next;
+	}
+	//
 	lstclear(&(a->start));
 	free(a);
 	return (0);
