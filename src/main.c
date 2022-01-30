@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/30 14:35:41 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/30 14:41:21 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_getarg	getav;
 	t_stack		*a;
+	t_stack		*b;
 
 	if (argc < 2)
 		return (0);
