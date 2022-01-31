@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:45:45 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 19:47:03 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 		}
 	}
 	else
-		
+		sort_threenum(a);
 	lstclear(&(a->start));
 	free(a);
 	return (0);

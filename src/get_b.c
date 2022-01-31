@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:10:58 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:46:18 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 19:52:26 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ void	shift_to_b(t_stack *a, t_stack *b, int mid)
 		{
 			push(a, b);
 			write(1, "pb\n", 3);
-
+			rotate(b);
+			write(1, "rb\n", 3);
+		}
+		else
+		{
+			push(a, b);
+			write(1, "pb\n", 3);
 		}
 	}
 }
