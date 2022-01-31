@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:21:53 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/30 14:24:34 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 17:24:42 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,17 @@ t_lst	*lstnext(t_lst *lst, int val)
 	if (lst)
 		lst->next = new;
 	return (new);
+}
+
+t_lst	*lst_n_elem(t_stack *stack, int n)
+{
+	t_lst	*lst;
+
+	lst = stack->start;
+	while (n > 1)
+	{
+		lst = lst->next;
+		n--;
+	}
+	return (lst);
 }

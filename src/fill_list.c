@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 21:16:34 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 19:29:24 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	check_repeats(int *arg, int counter)
 	j = 0;
 	while (i < counter)
 	{
-		j = i+1;
+		j = i + 1;
   		while (j < counter)
 		{
     		if (arg[i] == arg[j])
@@ -59,6 +59,20 @@ void	check_sort(int *arg, int len)
 	}
 }
 
+int	check_sort_list(t_stack *a)
+{
+	t_lst	*temp;
+
+	temp = a->start;
+	while (temp && temp->next)
+	{
+		if (temp->num > temp->next->num)
+			return (0);
+		temp = temp->next;
+	}
+	return (1);
+}
+
 t_stack	*fill_list(t_getarg getav, t_stack *a, int *array)
 {
 	t_lst	*new;
@@ -67,15 +81,11 @@ t_stack	*fill_list(t_getarg getav, t_stack *a, int *array)
 	a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)
 		ft_perror();
-	new = lstnew(*array); // add free
+	new = lstnew(*array);
 	a->start = new;
 	a->len = getav.cntr;
 	i = 1;
 	while (i < getav.cntr)
-		new = lstnext(new, *(array + i++)); // add free
-	a->min = array[0];
-	a->mid = array[a->len / 2];
-	a->max = array[a->len - 1];
+		new = lstnext(new, *(array + i++));
 	return (a);
 }
-

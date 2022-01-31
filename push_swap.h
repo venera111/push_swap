@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/30 14:34:03 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 19:09:54 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,25 @@ void	check_repeats(int *arg, int counter);
 void	check_sort(int *arg, int len);
 t_stack	*get_argv(char **argv, int argc, t_getarg getav, t_stack *a);
 t_stack	*fill_list(t_getarg getav, t_stack *a, int *array);
+t_stack	*get_b(t_stack *a);
+//sort
+int		check_sort_list(t_stack *a);
+void	sort_threenum(t_stack *a);
+void	sort_threenum2(t_stack *a, int a1, int a2, int a3);
 
 //lists
 t_lst	*lstnew(int val);
 t_lst	*lstnext(t_lst *lst, int val);
 void	lstclear(t_lst **lst);
+t_lst	*lst_n_elem(t_stack *stack, int n);
+
+//comm
+void	swap(t_stack *stack);
+void	reverse_rotate(t_stack *stack);
+void	rotate(t_stack *stack);
+void	push(t_stack *a, t_stack *b);
+
+void	commands_count(t_stack *stack, void (*f)(t_stack *), int count);
+void	shift_to_b(t_stack *a, t_stack *b, int mid);
 
 #endif

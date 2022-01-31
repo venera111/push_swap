@@ -6,11 +6,18 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:57:49 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 21:11:52 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 13:13:41 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	fill_statistics(t_stack *a, int *array)
+{
+	a->min = array[0];
+	a->mid = array[a->len / 2];
+	a->max = array[a->len - 1];
+}
 
 int	*fill_array(int *buffer, char **str, int count)
 {
@@ -67,11 +74,12 @@ t_stack	*get_argv(char **argv, int argc, t_getarg getav, t_stack *a)
 		ft_free(getav.str);
 		array = save_buffer(array, getav.buff, getav.cnt, getav.cntr);
 		free(getav.buff);
-		getav.i++;
+		getav.i ++;
 	}
+	a = fill_list(getav, a, array);
 	check_repeats(array, getav.cntr);
 	check_sort(array, getav.cntr);
-	a = fill_list(getav, a, array);
+	fill_statistics(a, array);
 	free(array);
 	return (a);
 }

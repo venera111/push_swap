@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   commands_count.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:27:09 by qestefan         ###   ########.fr       */
+/*   Created: 2022/01/31 18:19:07 by qestefan          #+#    #+#             */
+/*   Updated: 2022/01/31 18:25:14 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	main(int argc, char **argv)
+void	commands_count(t_stack *stack, void (*f)(t_stack *), int count)
 {
-	t_getarg	getav;
-	t_stack		*a;
-	t_stack		*b;
+	int	i;
 
-	if (argc < 2)
-		return (0);
-	a = get_argv(argv, argc, getav, a); // добавить ошибки на нецелое число и <= >= int
-	b = get_b(a);
-	if (a->len < 3)
+	i = 0;
+	while (i < count)
 	{
-		if (!)
+		f(stack);
+		i++;
 	}
-	lstclear(&(a->start));
-	free(a);
-	return (0);
+}
+
+void	ft_write_count(char *str, int count)
+{
+	int	i;
+
+	i = 0;
+	while (i < count)
+	{
+		write(1, str, ft_strlen(str));
+		i++;
+	}
 }
