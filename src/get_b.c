@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:10:58 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:04:50 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/01/31 19:46:18 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	shift_to_b(t_stack *a, t_stack *b, int mid)
 		{
 			push(a, b);
 			write(1, "pb\n", 3);
-			
+
 		}
 	}
 }
@@ -36,17 +36,8 @@ t_stack	*get_b(t_stack *a)
 	b->start = NULL;
 	b->len = 0;
 	if (a->len < 3)
-	{
-		if (!check_sort_list(a))
-		{
-			swap(a); // не отсортирован, первый обльше второго -> меняем местами элементы "а"
-			write(1, "sa\n", 3);
-		}
 		return (b);
-	}
 	else if (!check_sort_list(a) && a->len > 3)
 		shift_to_b(a, b, a->mid);
-	else
-		sort_threenum(a);
 	return (b);
 }
