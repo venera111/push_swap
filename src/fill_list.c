@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:29:24 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 13:56:21 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 void	check_repeats(int *arg, int counter)
 {
-	int j;
-	int i;
+	int	j;
+	int	i;
 
 	i = 0;
 	j = 0;
 	while (i < counter)
 	{
 		j = i + 1;
-  		while (j < counter)
+		while (j < counter)
 		{
-    		if (arg[i] == arg[j])
+			if (arg[i] == arg[j])
 				ft_perror();
 			j++;
 		}
 		i++;
-  	}
-
+	}
 }
 
 void	check_sort(int *arg, int len)
@@ -76,7 +75,7 @@ int	check_sort_list(t_stack *a)
 t_stack	*fill_list(t_getarg getav, t_stack *a, int *array)
 {
 	t_lst	*new;
-	int 	i;
+	int		i;
 
 	a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)

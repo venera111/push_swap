@@ -6,25 +6,25 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:26:59 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 21:49:53 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 13:54:52 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap(t_stack *stack) // меняем местами два первых элемента
+void	swap(t_stack *stack)
 {
 	t_lst	*temp;
 
 	if (stack->len < 2)
 		return ;
-	temp = stack->start->next; //сохраняем адрес второй ноды
-	stack->start->next = stack->start->next->next;// по указателю второй ноды хранится третья
-	temp->next = stack->start; // вслед за вторым эл сохраняем первый в temp
-	stack->start = temp; //добавляем указатель в начало списка
+	temp = stack->start->next;
+	stack->start->next = stack->start->next->next;
+	temp->next = stack->start;
+	stack->start = temp;
 }
 
-void	reverse_rotate(t_stack *stack) // последний элемент становится первым
+void	reverse_rotate(t_stack *stack)
 {
 	t_lst	*lst;
 	t_lst	*temp;
@@ -38,7 +38,7 @@ void	reverse_rotate(t_stack *stack) // последний элемент ста�
 	stack->start = temp;
 }
 
-void	push(t_stack *a, t_stack *b) // разобрать
+void	push(t_stack *a, t_stack *b)
 {
 	t_lst	*temp;
 
@@ -52,7 +52,7 @@ void	push(t_stack *a, t_stack *b) // разобрать
 	b->len++;
 }
 
-void	rotate(t_stack *stack) // разобрать
+void	rotate(t_stack *stack)
 {
 	t_lst	*temp;
 

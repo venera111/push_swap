@@ -6,16 +6,16 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 12:06:16 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 13:58:27 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include "libft/libft.h"
-#include <stdlib.h> // malloc free
-#include <stdio.h> // printf
+# include "libft/libft.h"
+# include <stdlib.h> // malloc free
+# include <stdio.h> // printf
 
 typedef struct s_lst
 {
@@ -73,35 +73,26 @@ t_commands	get_move(int pos_a, int pos_b, int len_a, int len_b);
 int			position(t_stack *stack, int num);
 int			index_num(t_stack *stack, int num);
 void		rotate_count(t_stack *stack, int n);
-//sort
-int		check_sort_list(t_stack *a);
-void	sort_threenum(t_stack *a);
-void	sort_threenum2(t_stack *a, int a1, int a2, int a3);
+int			check_sort_list(t_stack *a);
+void		sort_threenum(t_stack *a);
+void		sort_threenum2(t_stack *a, int a1, int a2, int a3);
+t_lst		*lstnew(int val);
+t_lst		*lstnext(t_lst *lst, int val);
+void		lstclear(t_lst **lst);
+t_lst		*lst_n_elem(t_stack *stack, int n);
+void		swap(t_stack *stack);
+void		reverse_rotate(t_stack *stack);
+void		rotate(t_stack *stack);
+void		push(t_stack *a, t_stack *b);
+void		commands_count(t_stack *stack, void (*f)(t_stack *), int count);
+void		shift_to_b(t_stack *a, t_stack *b, int mid);
+void		move_1(t_stack *a, t_stack *b, t_commands move);
+void		move_2(t_stack *a, t_stack *b, t_commands move);
+void		move_3(t_stack *a, t_stack *b, t_commands move);
+void		move_4(t_stack *a, t_stack *b, t_commands move);
+void		ft_write_count(char *str, int count);
+int			ft_max(int a, int b);
+int			ft_min(int a, int b);
+void		change_stack(t_stack *stack);
 
-//lists
-t_lst	*lstnew(int val);
-t_lst	*lstnext(t_lst *lst, int val);
-void	lstclear(t_lst **lst);
-t_lst	*lst_n_elem(t_stack *stack, int n);
-
-//comm
-void	swap(t_stack *stack);
-void	reverse_rotate(t_stack *stack);
-void	rotate(t_stack *stack);
-void	push(t_stack *a, t_stack *b);
-
-void	commands_count(t_stack *stack, void (*f)(t_stack *), int count);
-void	shift_to_b(t_stack *a, t_stack *b, int mid);
-
-// move
-void	move_1(t_stack *a, t_stack *b, t_commands move);
-void	move_2(t_stack *a, t_stack *b, t_commands move);
-void	move_3(t_stack *a, t_stack *b, t_commands move);
-void	move_4(t_stack *a, t_stack *b, t_commands move);
-
-//utils
-void	ft_write_count(char *str, int count);
-int		ft_max(int a, int b);
-int		ft_min(int a, int b);
-void	change_stack(t_stack *stack);
 #endif

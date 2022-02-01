@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 11:56:46 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 13:57:23 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	a = get_argv(argv, argc, getav, a); // добавить ошибки на нецелое число и <= >= int
+	a = get_argv(argv, argc, getav, a);
 	b = get_b(a);
 	if (a->len < 3)
 	{
 		if (!check_sort_list(a))
 		{
 			swap(a);
-			write(1, "sa\n",3);
+			write(1, "sa\n", 3);
 		}
 	}
 	else
