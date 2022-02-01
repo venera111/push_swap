@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 13:57:23 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:22:24 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 int	main(int argc, char **argv)
 {
@@ -20,7 +20,9 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	a = get_argv(argv, argc, getav, a);
+	a = NULL;
+	init_getargv(&getav);
+	a = get_argv(argv, getav, a);
 	b = get_b(a);
 	if (a->len < 3)
 	{

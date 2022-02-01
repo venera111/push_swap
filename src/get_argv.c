@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:57:49 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 13:13:41 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:22:43 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 void	fill_statistics(t_stack *a, int *array)
 {
@@ -55,11 +55,10 @@ void	init_getargv(t_getarg *getav)
 	getav->k = 0;
 }
 
-t_stack	*get_argv(char **argv, int argc, t_getarg getav, t_stack *a)
+t_stack	*get_argv(char **argv, t_getarg getav, t_stack *a)
 {
 	static int	*array;
 
-	init_getargv(&getav);
 	while (argv[getav.i])
 	{
 		getav.str = ft_split(argv[getav.i], ' ');

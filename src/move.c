@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:03:50 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 12:06:39 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:16:57 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 void	move_1(t_stack *a, t_stack *b, t_commands move)
 {

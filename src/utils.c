@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 14:47:33 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/29 15:29:24 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:16:46 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 void	ft_free(char **str)
 {

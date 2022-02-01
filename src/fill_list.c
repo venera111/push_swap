@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:36:20 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 13:56:21 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:17:27 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 void	check_repeats(int *arg, int counter)
 {

@@ -6,16 +6,16 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 13:58:27 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:22:36 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/libft.h"
-# include <stdlib.h> // malloc free
-# include <stdio.h> // printf
+# include <libft.h>
+# include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_lst
 {
@@ -59,12 +59,13 @@ int			*ft_strjoin_int(int *s1, int *s2, int counter, int count);
 int			*ft_strdup_int(const int *s1, int count);
 int			*save_buffer(int *array, int *buffer, int count, int counter);
 int			*fill_array(int *buffer, char **str, int count);
+void		init_getargv(t_getarg *getav);
 int			ft_arrlen(char **str);
 void		ft_free(char **str);
 void		ft_perror(void);
 void		check_repeats(int *arg, int counter);
 void		check_sort(int *arg, int len);
-t_stack		*get_argv(char **argv, int argc, t_getarg getav, t_stack *a);
+t_stack		*get_argv(char **argv, t_getarg getav, t_stack *a);
 t_stack		*fill_list(t_getarg getav, t_stack *a, int *array);
 t_stack		*get_b(t_stack *a);
 void		get_a(t_stack *a, t_stack *b);

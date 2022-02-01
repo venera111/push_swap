@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 19:28:57 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 13:57:28 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:16:51 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 void	sort_threenum2(t_stack *a, int a1, int a2, int a3)
 {

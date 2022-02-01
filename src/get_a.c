@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 11:34:40 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 11:52:02 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:17:22 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include <push_swap.h>
 
 int	index_num(t_stack *stack, int num)
 {
