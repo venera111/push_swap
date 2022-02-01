@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:09:54 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:55:39 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,37 @@ typedef struct s_getarg
 	int			*buff;
 }	t_getarg;
 
-int		ft_masslen(int *array);
-int		*ft_strjoin_int(int *s1, int *s2, int counter, int count);
-int		*ft_strdup_int(const int *s1, int count);
-int		*save_buffer(int *array, int *buffer, int count, int counter);
-int		*fill_array(int *buffer, char **str, int count);
-int		ft_arrlen(char **str);
-void	ft_free(char **str);
-void	ft_perror(void);
-void	check_repeats(int *arg, int counter);
-void	check_sort(int *arg, int len);
-t_stack	*get_argv(char **argv, int argc, t_getarg getav, t_stack *a);
-t_stack	*fill_list(t_getarg getav, t_stack *a, int *array);
-t_stack	*get_b(t_stack *a);
+typedef struct s_commands
+{
+	int	ra;
+	int	rb;
+	int	rra;
+	int	rrb;
+	int	f1;
+	int	f2;
+	int	f3;
+	int	f4;
+}	t_commands;
+
+int			ft_masslen(int *array);
+int			*ft_strjoin_int(int *s1, int *s2, int counter, int count);
+int			*ft_strdup_int(const int *s1, int count);
+int			*save_buffer(int *array, int *buffer, int count, int counter);
+int			*fill_array(int *buffer, char **str, int count);
+int			ft_arrlen(char **str);
+void		ft_free(char **str);
+void		ft_perror(void);
+void		check_repeats(int *arg, int counter);
+void		check_sort(int *arg, int len);
+t_stack		*get_argv(char **argv, int argc, t_getarg getav, t_stack *a);
+t_stack		*fill_list(t_getarg getav, t_stack *a, int *array);
+t_stack		*get_b(t_stack *a);
+void		get_a(t_stack *a, t_stack *b);
+t_commands	min_move(t_stack *a, t_stack *b);
+t_commands	get_move(int pos_a, int pos_b, int len_a, int len_b);
+int			position(t_stack *stack, int num);
+int			index_num(t_stack *stack, int num);
+void		rotate_count(t_stack *stack, int n);
 //sort
 int		check_sort_list(t_stack *a);
 void	sort_threenum(t_stack *a);

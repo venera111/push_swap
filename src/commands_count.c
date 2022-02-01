@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 18:19:07 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 18:25:14 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:59:35 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,22 @@ void	commands_count(t_stack *stack, void (*f)(t_stack *), int count)
 	{
 		f(stack);
 		i++;
+	}
+}
+
+void	rotate_count(t_stack *stack, int n)
+{
+	if (n - (stack->len) / 2 - (stack->len) % 2 > 0)
+	{
+		n = stack->len - n + 1;
+		commands_count(stack, reverse_rotate, n);
+		ft_write_count("rra\n", n);
+	}
+	else
+	{
+		n = n - 1;
+		commands_count(stack, rotate, n);
+		ft_write_count("ra\n", n);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/01/31 19:47:03 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:56:46 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ int	main(int argc, char **argv)
 	}
 	else
 		sort_threenum(a);
+	get_a(a, b);
+	rotate_count(a, index_num(a, a->min) + 1);
 	lstclear(&(a->start));
+	lstclear(&(b->start));
 	free(a);
+	free(b);
 	return (0);
 }
