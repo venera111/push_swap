@@ -6,11 +6,25 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 19:28:57 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:16:51 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:30:51 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
+
+void	continue_sorting(t_stack *a)
+{
+	if (a->len < 3)
+	{
+		if (!check_sort_list(a))
+		{
+			swap(a);
+			write(1, "sa\n", 3);
+		}
+	}
+	else
+		sort_threenum(a);
+}
 
 void	sort_threenum2(t_stack *a, int a1, int a2, int a3)
 {

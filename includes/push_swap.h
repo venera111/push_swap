@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:22:36 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:30:55 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int			position(t_stack *stack, int num);
 int			index_num(t_stack *stack, int num);
 void		rotate_count(t_stack *stack, int n);
 int			check_sort_list(t_stack *a);
+void		continue_sorting(t_stack *a);
 void		sort_threenum(t_stack *a);
 void		sort_threenum2(t_stack *a, int a1, int a2, int a3);
 t_lst		*lstnew(int val);

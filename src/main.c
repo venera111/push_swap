@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:55:51 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:22:24 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:30:45 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,7 @@ int	main(int argc, char **argv)
 	init_getargv(&getav);
 	a = get_argv(argv, getav, a);
 	b = get_b(a);
-	if (a->len < 3)
-	{
-		if (!check_sort_list(a))
-		{
-			swap(a);
-			write(1, "sa\n", 3);
-		}
-	}
-	else
-		sort_threenum(a);
+	continue_sorting(a);
 	get_a(a, b);
 	rotate_count(a, index_num(a, a->min) + 1);
 	lstclear(&(a->start));
