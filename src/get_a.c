@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 11:34:40 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:17:22 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:55:39 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,17 @@ int	position(t_stack *stack, int num)
 
 t_commands	get_move(int pos_a, int pos_b, int len_a, int len_b)
 {
-	t_commands	movements;
+	t_commands	move;
 
-	movements.ra = pos_a;
-	movements.rb = pos_b;
-	movements.rra = len_a - pos_a;
-	movements.rrb = len_b - pos_b;
-	movements.f1 = ft_max(movements.ra, movements.rb);
-	movements.f2 = movements.ra + movements.rrb;
-	movements.f3 = movements.rra + movements.rb;
-	movements.f4 = ft_max(movements.rra, movements.rrb);
-	return (movements);
+	move.ra = pos_a;
+	move.rb = pos_b;
+	move.rra = len_a - pos_a;
+	move.rrb = len_b - pos_b;
+	move.f1 = ft_max(move.ra, move.rb);
+	move.f2 = move.ra + move.rrb;
+	move.f3 = move.rra + move.rb;
+	move.f4 = ft_max(move.rra, move.rrb);
+	return (move);
 }
 
 t_commands	min_move(t_stack *a, t_stack *b)
