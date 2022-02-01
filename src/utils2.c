@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 11:57:37 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 12:00:33 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 12:26:26 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,10 @@ int	ft_min(int a, int b)
 	if (a <= b)
 		return (a);
 	return (b);
+}
+
+void	ft_perror(void)
+{
+	write(1, "Error\n", 6);
+	exit(0);
 }
