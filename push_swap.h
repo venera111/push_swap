@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 11:55:39 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/01 12:06:16 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,15 @@ void	push(t_stack *a, t_stack *b);
 void	commands_count(t_stack *stack, void (*f)(t_stack *), int count);
 void	shift_to_b(t_stack *a, t_stack *b, int mid);
 
+// move
+void	move_1(t_stack *a, t_stack *b, t_commands move);
+void	move_2(t_stack *a, t_stack *b, t_commands move);
+void	move_3(t_stack *a, t_stack *b, t_commands move);
+void	move_4(t_stack *a, t_stack *b, t_commands move);
+
+//utils
+void	ft_write_count(char *str, int count);
+int		ft_max(int a, int b);
+int		ft_min(int a, int b);
+void	change_stack(t_stack *stack);
 #endif
