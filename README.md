@@ -10,8 +10,22 @@ During defence we’ll compare the number of instructions your program found wit
 prompt back
 - In case of error, you must display Error followed by a ’\n’ on the standard error. Errors include for example: some arguments aren’t integers, some arguments are bigger than an integer, and/or there are duplicates.
 
-### Bonus part
+During the defence we’ll provide a binnary to properly check your program. It will work as follows:
+```
+ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
+```
+```
+6
+```
+```
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
+```
+```
+OK
+```
 
+### Bonus part
+Creating your own checker
 
 ### Examples
 ```
