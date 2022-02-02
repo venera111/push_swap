@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 20:58:21 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/02 07:19:19 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 08:12:30 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	push_swap(t_stack *a, t_stack *b)
 			push(b, a);
 		if (!ft_strncmp("pb\n", str, 3))
 			push(a, b);
-		push_swap2(1, b, str);
+		push_swap2(a, b, str);
 		free(str);
 		str = get_next_line(0);
 	}
@@ -64,7 +64,7 @@ void	push_swap(t_stack *a, t_stack *b)
 int	main(int argc, char **argv)
 {
 	t_stack		*a;
-	t_stack 	*b;
+	t_stack		*b;
 	t_getarg	getav;
 
 	if (argc < 2)

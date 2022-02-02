@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:30:55 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 07:59:48 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ void		ft_write_count(char *str, int count);
 int			ft_max(int a, int b);
 int			ft_min(int a, int b);
 void		change_stack(t_stack *stack);
+char		*get_next_line(int fd);
 
 #endif
