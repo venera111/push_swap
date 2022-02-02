@@ -48,7 +48,7 @@ pa
 ra
 ```
 
-### Leaks
+### Checking for memory leaks
 ./checker
 ```
 ARG="4 67 3 87 23 7"; ./push_swap $ARG | leaks --atExit -- ./checker $ARG
