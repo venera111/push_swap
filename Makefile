@@ -6,7 +6,7 @@
 #    By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/01 14:12:43 by qestefan          #+#    #+#              #
-#    Updated: 2022/02/01 21:03:15 by qestefan         ###   ########.fr        #
+#    Updated: 2022/02/02 07:21:23 by qestefan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS =	$(DIR)main.c $(DIR)get_argv.c $(DIR)get_b.c $(DIR)fill_list.c $(DIR)get_a
 		$(DIR)commands_count.c $(DIR)commands.c $(DIR)lists.c $(DIR)move.c $(DIR)utils.c \
 		$(DIR)sorting.c $(DIR)utils2.c
 
-BONUS_SRCS = $(BONUS)checker.c ############################## добавить файлы
+BONUS_SRCS = $(BONUS)checker.c $(DIR)get_argv.c $(DIR)utils2.c $(DIR)commands.c
 
 AR = ar rc
 
