@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 19:28:57 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 16:33:01 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 09:45:50 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 void	continue_sorting(t_stack *a)
 {

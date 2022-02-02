@@ -6,16 +6,17 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:30:55 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 09:51:27 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <libft.h>
+# include "libft/libft.h"
 # include <stdlib.h>
 # include <stdio.h>
+# include "get_next_line/get_next_line.h"
 
 typedef struct s_lst
 {
@@ -96,5 +97,6 @@ void		ft_write_count(char *str, int count);
 int			ft_max(int a, int b);
 int			ft_min(int a, int b);
 void		change_stack(t_stack *stack);
+char		*get_next_line(int fd);
 
 #endif

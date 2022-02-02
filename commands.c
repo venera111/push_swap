@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:26:59 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:17:32 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 09:45:21 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 void	swap(t_stack *stack)
 {

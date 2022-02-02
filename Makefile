@@ -6,61 +6,54 @@
 #    By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/01 14:12:43 by qestefan          #+#    #+#              #
-#    Updated: 2022/02/02 07:49:52 by qestefan         ###   ########.fr        #
+#    Updated: 2022/02/02 10:08:03 by qestefan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -Werror
+NAME	= push_swap
+NAME_B	= checker
 
-NAME_PROJECT = push_swap
-LIB_DIR = ./libft/
-LIB_NAME =	libft/libft.a
-LIB_HEADER = libft
-LIBFT = libft.a
-CC = gcc
-HEADER = ./includes/
-OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
-DIR = ./src/
-BONUS = ./bonus/
+SRCS	= 	main.c commands_count.c commands.c fill_list.c get_a.c get_argv.c\
+			get_b.c lists.c move.c sorting.c utils.c utils2.c
 
-SRCS =	$(DIR)main.c $(DIR)get_argv.c $(DIR)get_b.c $(DIR)fill_list.c $(DIR)get_a.c \
-		$(DIR)commands_count.c $(DIR)commands.c $(DIR)lists.c $(DIR)move.c $(DIR)utils.c \
-		$(DIR)sorting.c $(DIR)utils2.c
+SRCS_B	= 	checker.c commands_count.c commands.c fill_list.c get_a.c get_argv.c\
+			get_b.c lists.c move.c sorting.c utils.c utils2.c\
+			get_next_line/get_next_line.c get_next_line/get_next_line_utils.c\
 
-BONUS_SRCS = $(BONUS)checker.c $(DIR)get_argv.c $(DIR)utils2.c $(DIR)commands.c
+LIBFT 	= ./libft/libft.a
+LIB_DIR = ./libft
+GNL_DIR = get_next_line/get_next_line.h
+HEADER  = push_swap.h ./libft/libft.h
 
-AR = ar rc
+RM		= rm -f
 
-.c.o:
-	$(CC) $(FLAGS) -c -I$(HEADER) -I$(LIB_HEADER) $< -o $(<:.c=.o)
+OBJS	= $(SRCS:.c=.o)
+OBJS_B	= $(SRCS_B:.c=.o)
 
-all: $(LIBFT) $(NAME_PROJECT)
+CC		= gcc
 
-$(NAME): $(OBJS) $(HEADER)
-	$(MAKE) -C $(LIB_DIR)
-	$(CC) $(FLAGS) $(OBJS) $(LIB_NAME) -I$(HEADER) -o $(NAME_PROJECT)
+CFLAGS	=	-Wall -Wextra -Werror
 
-bonus : $(BONUS_PART) $(LIBFT) $(NAME_PROJECT)
+$(NAME):	$(OBJS) $(HEADER)
+			$(MAKE) -C $(LIB_DIR)
+			$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o ${NAME}
 
-$(BONUS_PART):
-		$(BONUS_OBJS) -I$(HEADER) get_next_line/get_next_line.h
-$(LIBFT):
-		@$(MAKE) -C $(LIB_DIR)
-$(NAME_PROJECT): $(OBJS)
-		$(CC) $(FLAGS) -I$(HEADER) $(OBJS) -L. $(LIB_NAME) -o $(NAME_PROJECT)
+bonus:		$(OBJS_B) $(HEADER) $(GNL_DIR)
+			$(MAKE) -C $(LIB_DIR)
+			$(CC) $(CFLAGS) $(OBJS_B) $(LIBFT) -o ${NAME_B}
+
+all:		$(NAME)
 
 clean:
-	make clean -C $(LIB_DIR)
-	rm -rf $(OBJS)
+			$(RM) $(OBJS) $(OBJS_B)
+			$(MAKE) clean -C $(LIB_DIR)
 
-fclean: clean
-	make fclean -C $(LIB_DIR)
-	rm -rf $(NAME_PROJECT)
+fclean:		clean
+			$(RM) $(NAME) $(NAME_B) $(LIBFT)
 
-re: fclean all
+re:			fclean all
 
 norm:
-	norminette src/*.c includes/*.h
+			norminette *.c *.h
 
-.PHONY: all clean fclean re bonus norm
+.PHONY:		all clean fclean bonus re norm

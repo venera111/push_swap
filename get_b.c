@@ -6,11 +6,11 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:10:58 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/01 14:22:59 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 09:45:38 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 void	shift_to_b(t_stack *a, t_stack *b, int mid)
 {
