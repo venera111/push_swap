@@ -14,12 +14,14 @@ During the defence we’ll provide a binnary to properly check your program. It 
 ```
 ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
 ```
+should be output:
 ```
 6
 ```
 ```
 ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
 ```
+should be output:
 ```
 OK
 ```
