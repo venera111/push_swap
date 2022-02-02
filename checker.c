@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 20:58:21 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/02 12:49:10 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 12:51:38 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
-	// argv++;
-	// argc--;
 	a = NULL;
 	init_getargv(&getav);
 	a = get_argv(argv, getav, a);
