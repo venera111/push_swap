@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:57:49 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/02 09:45:35 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 15:27:30 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	*fill_array(int *buffer, char **str, int count)
 	i = 0;
 	while (i < count)
 	{
-		buffer[i] = ft_atoi(str[i]);
+		buffer[i] = ft_atoi_swap(str[i]);
 		i++;
 	}
 	return (buffer);

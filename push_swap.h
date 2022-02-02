@@ -6,7 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-/*   Updated: 2022/02/02 12:36:38 by qestefan         ###   ########.fr       */
+/*   Updated: 2022/02/02 15:29:23 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int			ft_max(int a, int b);
 int			ft_min(int a, int b);
 void		change_stack(t_stack *stack);
 char		*get_next_line(int fd);
+int			ft_atoi_swap(char *str);
 
 #endif
