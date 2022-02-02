@@ -48,6 +48,19 @@ pa
 ra
 ```
 
+### Leaks
+./checker
+```
+ARG="4 67 3 87 23 7"; ./push_swap $ARG | leaks --atExit -- ./checker $ARG
+```
+./push_swap
+```
+ARG="4 67 3 87 23 7"; leaks --atExit -- ./push_swap $ARG
+```
+or
+```
+leaks --atExit -- ./push_swap " 456 343 567" "0 -34 "
+```
 ### Resources
 Лекция push_swap [YouTube](https://www.youtube.com/watch?v=98r9uhjPveE)
 
