@@ -6,11 +6,7 @@
 /*   By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:56:41 by qestefan          #+#    #+#             */
-<<<<<<< HEAD:push_swap.h
-/*   Updated: 2022/02/02 09:51:27 by qestefan         ###   ########.fr       */
-=======
-/*   Updated: 2022/02/02 07:59:48 by qestefan         ###   ########.fr       */
->>>>>>> 43c9e8702250249d4e9f5eb4e812f6c28adda6db:includes/push_swap.h
+/*   Updated: 2022/02/02 12:36:38 by qestefan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
