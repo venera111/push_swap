@@ -28,6 +28,13 @@ OK
 
 ### Bonus part
 Creating your own checker
+```
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+```
+should be output:
+```
+OK
+```
 
 ### Examples
 ```
