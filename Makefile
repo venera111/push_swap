@@ -6,7 +6,7 @@
 #    By: qestefan <qestefan@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/01 14:12:43 by qestefan          #+#    #+#              #
-#    Updated: 2022/02/02 07:21:23 by qestefan         ###   ########.fr        #
+#    Updated: 2022/02/02 07:49:52 by qestefan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBFT = libft.a
 CC = gcc
 HEADER = ./includes/
 OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_SRCS:,c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 DIR = ./src/
 BONUS = ./bonus/
 
