@@ -42,5 +42,5 @@ ra
 ```
 
 ### Resources
-Лекция push_swap [Лекция push_swap @einterdi](https://www.youtube.com/watch?v=98r9uhjPveE)
+Лекция push_swap [YouTube](https://www.youtube.com/watch?v=98r9uhjPveE)
 
